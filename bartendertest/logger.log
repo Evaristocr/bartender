@@ -1,0 +1,42 @@
+2018-01-24 23:00:59.525  INFO 20744 --- [main] com.evaristo.bartender.BartenderApp      : Starting BartenderApp on CPX-60LKEJ885W6 with PID 20744 (C:\Users\e.a.carmona.robledo\git\bartender\bartendertest\target\classes started by e.a.carmona.robledo in C:\Users\e.a.carmona.robledo\git\bartender\bartendertest)
+2018-01-24 23:00:59.528  INFO 20744 --- [main] com.evaristo.bartender.BartenderApp      : No active profile set, falling back to default profiles: default
+2018-01-24 23:00:59.572  INFO 20744 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@31206beb: startup date [Wed Jan 24 23:00:59 CET 2018]; root of context hierarchy
+2018-01-24 23:01:00.867  INFO 20744 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-01-24 23:01:00.881  INFO 20744 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-01-24 23:01:00.882  INFO 20744 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-01-24 23:01:01.016  INFO 20744 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-01-24 23:01:01.017  INFO 20744 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1447 ms
+2018-01-24 23:01:01.166  INFO 20744 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-01-24 23:01:01.170  INFO 20744 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-01-24 23:01:01.170  INFO 20744 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-01-24 23:01:01.170  INFO 20744 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-01-24 23:01:01.171  INFO 20744 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-01-24 23:01:01.222  INFO 20744 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'beerTaskExecutor'
+2018-01-24 23:01:01.224  INFO 20744 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'drinkTaskExecutor'
+2018-01-24 23:01:01.458  INFO 20744 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@31206beb: startup date [Wed Jan 24 23:00:59 CET 2018]; root of context hierarchy
+2018-01-24 23:01:01.520  INFO 20744 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/drink],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.evaristo.bartender.controller.CustomerRequestController.serveDrink(java.lang.String,java.lang.String)
+2018-01-24 23:01:01.523  INFO 20744 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-01-24 23:01:01.524  INFO 20744 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-01-24 23:01:01.546  INFO 20744 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-24 23:01:01.547  INFO 20744 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-24 23:01:01.579  INFO 20744 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-24 23:01:01.695  INFO 20744 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-01-24 23:01:01.750  INFO 20744 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-01-24 23:01:01.755  INFO 20744 --- [main] com.evaristo.bartender.BartenderApp      : Started BartenderApp in 2.605 seconds (JVM running for 3.004)
+2018-01-24 23:24:19.792  INFO 20744 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-01-24 23:24:19.792  INFO 20744 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-01-24 23:24:19.810  INFO 20744 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 18 ms
+2018-01-24 23:24:19.852  INFO 20744 --- [http-nio-8080-exec-1] c.e.b.c.CustomerRequestController        : Request id: 1 Incoming request. Type: BEER
+2018-01-24 23:24:19.853  INFO 20744 --- [http-nio-8080-exec-1] c.e.b.c.CustomerRequestController        : Request id: 1 Request accepted. Serving a BEER
+2018-01-24 23:24:21.706  INFO 20744 --- [http-nio-8080-exec-2] c.e.b.c.CustomerRequestController        : Request id: 1 Incoming request. Type: BEER
+2018-01-24 23:24:21.707  INFO 20744 --- [http-nio-8080-exec-2] c.e.b.c.CustomerRequestController        : Request id: 1 Request accepted. Serving a BEER
+2018-01-24 23:24:25.808  INFO 20744 --- [http-nio-8080-exec-3] c.e.b.c.CustomerRequestController        : Request id: 2 Incoming request. Type: DRINK
+2018-01-24 23:24:25.809  WARN 20744 --- [http-nio-8080-exec-3] c.e.b.c.CustomerRequestController        : Request id: 2 Bartender is busy, can't serve the request.
+2018-01-24 23:24:31.953  INFO 20744 --- [http-nio-8080-exec-4] c.e.b.c.CustomerRequestController        : Request id: 2 Incoming request. Type: DRINK
+2018-01-24 23:24:31.954  INFO 20744 --- [http-nio-8080-exec-4] c.e.b.c.CustomerRequestController        : Request id: 2 Request accepted. Serving a DRINK
+2018-01-24 23:24:38.501  INFO 20744 --- [http-nio-8080-exec-5] c.e.b.c.CustomerRequestController        : Request id: 1 Incoming request. Type: BEER
+2018-01-24 23:24:38.502  INFO 20744 --- [http-nio-8080-exec-5] c.e.b.c.CustomerRequestController        : Request id: 1 Request accepted. Serving a BEER
+2018-01-24 23:24:39.469  INFO 20744 --- [http-nio-8080-exec-6] c.e.b.c.CustomerRequestController        : Request id: 1 Incoming request. Type: BEER
+2018-01-24 23:24:39.470  INFO 20744 --- [http-nio-8080-exec-6] c.e.b.c.CustomerRequestController        : Request id: 1 Request accepted. Serving a BEER
+2018-01-24 23:24:41.290  INFO 20744 --- [http-nio-8080-exec-7] c.e.b.c.CustomerRequestController        : Request id: 1 Incoming request. Type: BEER
+2018-01-24 23:24:41.291  WARN 20744 --- [http-nio-8080-exec-7] c.e.b.c.CustomerRequestController        : Request id: 1 Bartender is busy, can't serve the request.
