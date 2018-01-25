@@ -1,5 +1,6 @@
 package com.evaristo.bartender.controller;
 
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,30 +13,30 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.evaristo.bartender.task.DrinkTask;
-
 @RestController
 public class CustomerRequestController {
 	
 	private final Logger logger = Logger.getLogger(getClass().getName());
 
 	@Autowired
-	private ThreadPoolTaskExecutor beerTaskExecutor;
+	private ThreadPoolTaskExecutor taskExecutor;
+	
+	@Value("${bartender.max-resources}")
+	private int bartenderMaxResources;
+	
+	@Value("${bartender.beer.consumed-resources}")
+	private int beerResources;
+	
+	@Value("${bartender.drink.consumed-resources}")
+	private int drinkResources;
 
-	@Autowired
-	private ThreadPoolTaskExecutor drinkTaskExecutor;
-
-	@Value("${bartender.beer-max-pool-size}")
-	private int beerMaxPoolSize;
-
-	@Value("${bartender.drink-max-pool-size}")
-	private int drinkMaxPoolSize;
-
-	@Value("${bartender.beer-serve-time}")
+	@Value("${bartender.beer.serve-time}")
 	private int beerServeTime;
 
-	@Value("${bartender.drink-serve-time}")
+	@Value("${bartender.drink.serve-time}")
 	private int drinkServeTime;
+	
+	private AtomicInteger usedResources = new AtomicInteger(0);
 
 	/**
 	 * Method to handle the "/drink" POST requests.
@@ -46,21 +47,19 @@ public class CustomerRequestController {
 	public ResponseEntity<String> serveDrink(@RequestParam String id, @RequestParam String type) {
 		logger.log(Level.INFO, "Request id: " + id + " Incoming request. Type: " + type);
 		ResponseEntity<String> response;
-
-		int activeDrinkTasks = drinkTaskExecutor.getActiveCount();
-		int activeBeerTasks = beerTaskExecutor.getActiveCount();
+		int freeResources = bartenderMaxResources - usedResources.get();
 
 		if (type.equals("BEER")) {
-			if (activeDrinkTasks == 0 && activeBeerTasks < beerMaxPoolSize) {
-				//If there are no DRINK tasks and less than 'beerMaxPoolSize' BEER tasks:
-				response = serveRequest(beerTaskExecutor, id);
+			if (freeResources >= beerResources) {
+				//If there are enough free resources serve the beer
+				response = serveRequest(id, beerServeTime);
 			} else {
 				response = rejectRequest(id);
 			}
 		} else if (type.equals("DRINK")) {
-			if (activeDrinkTasks == 0 && activeBeerTasks == 0) {
-				//If there are no DRINK tasks and no BEER tasks:
-				response = serveRequest(drinkTaskExecutor, id);
+			if (freeResources >= drinkResources) {
+				//If there are enough free resources serve the drink
+				response = serveRequest(id, drinkServeTime);
 			} else {
 				response = rejectRequest(id);
 			}
@@ -72,9 +71,9 @@ public class CustomerRequestController {
 		return response;
 	}
 	
-	private ResponseEntity<String> serveRequest(ThreadPoolTaskExecutor taskExecutor, String id) {
-		//Execute the task in the given taskExecutor and return HTTP 200 (OK)
-		taskExecutor.execute(new DrinkTask(drinkServeTime));
+	private ResponseEntity<String> serveRequest(String id, int serveTime) {
+		//Execute the task and return HTTP 200 (OK)
+		taskExecutor.execute(new DrinkTask(serveTime, usedResources));
 		logger.log(Level.INFO, "Request id: " + id + " Request accepted. Serving.");
 		return new ResponseEntity<String>("OK", HttpStatus.OK);
 	}
@@ -83,5 +82,30 @@ public class CustomerRequestController {
 		//Reject the task and return HTTP 429 (TOO MANY REQUESTS)
 		logger.log(Level.WARNING, "Request id: " + id + " The bartender is busy, can't serve the request.");
 		return new ResponseEntity<String>("TOO MANY REQUESTS", HttpStatus.TOO_MANY_REQUESTS);
+	}
+	
+	/**
+	 * Task that emulate the elaboration of a drink in the given time
+	 * @author e.a.carmona.robledo
+	 *
+	 */
+	private final class DrinkTask implements Runnable {
+		private int timeToServe;
+		
+		public DrinkTask(int timeToServe, AtomicInteger counter) {
+			this.timeToServe = timeToServe;
+		}
+		
+		@Override
+		public void run() {
+			try {
+				usedResources.incrementAndGet();
+				//Wait until the drink is served
+				Thread.sleep(timeToServe);
+				usedResources.decrementAndGet();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
 	}
 }

@@ -1,0 +1,238 @@
+2018-01-25 08:05:17.197  INFO 31324 --- [main] com.evaristo.bartender.BartenderApp      : Starting BartenderApp on CPX-60LKEJ885W6 with PID 31324 (C:\Users\e.a.carmona.robledo\git\bartender\bartendertest\target\classes started by e.a.carmona.robledo in C:\Users\e.a.carmona.robledo\git\bartender\bartendertest)
+2018-01-25 08:05:27.202  INFO 31324 --- [main] com.evaristo.bartender.BartenderApp      : No active profile set, falling back to default profiles: default
+2018-01-25 08:05:27.273  INFO 31324 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@31206beb: startup date [Thu Jan 25 08:05:27 CET 2018]; root of context hierarchy
+2018-01-25 08:05:28.572  INFO 31324 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-01-25 08:05:28.588  INFO 31324 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-01-25 08:05:28.589  INFO 31324 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-01-25 08:05:28.703  INFO 31324 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-01-25 08:05:28.704  INFO 31324 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1433 ms
+2018-01-25 08:05:28.833  INFO 31324 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-01-25 08:05:28.837  INFO 31324 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-01-25 08:05:28.838  INFO 31324 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-01-25 08:05:28.838  INFO 31324 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-01-25 08:05:28.839  INFO 31324 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-01-25 08:05:28.896  INFO 31324 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'beerTaskExecutor'
+2018-01-25 08:05:28.899  INFO 31324 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'drinkTaskExecutor'
+2018-01-25 08:05:29.134  INFO 31324 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@31206beb: startup date [Thu Jan 25 08:05:27 CET 2018]; root of context hierarchy
+2018-01-25 08:05:29.197  INFO 31324 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/drink],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.evaristo.bartender.controller.CustomerRequestController.serveDrink(java.lang.String,java.lang.String)
+2018-01-25 08:05:29.198  INFO 31324 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/log]}" onto public java.lang.String com.evaristo.bartender.controller.LogRequestController.serveLog()
+2018-01-25 08:05:29.200  INFO 31324 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-01-25 08:05:29.200  INFO 31324 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-01-25 08:05:29.225  INFO 31324 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-25 08:05:29.225  INFO 31324 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-25 08:05:29.257  INFO 31324 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-25 08:05:29.372  INFO 31324 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-01-25 08:05:29.433  INFO 31324 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-01-25 08:05:29.436  INFO 31324 --- [main] com.evaristo.bartender.BartenderApp      : Started BartenderApp in 12.583 seconds (JVM running for 13.014)
+2018-01-25 08:05:34.202  INFO 31324 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-01-25 08:05:34.203  INFO 31324 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-01-25 08:05:34.219  INFO 31324 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 15 ms
+2018-01-25 08:06:54.178  INFO 28820 --- [main] com.evaristo.bartender.BartenderApp      : Starting BartenderApp on CPX-60LKEJ885W6 with PID 28820 (C:\Users\e.a.carmona.robledo\git\bartender\bartendertest\target\classes started by e.a.carmona.robledo in C:\Users\e.a.carmona.robledo\git\bartender\bartendertest)
+2018-01-25 08:06:54.181  INFO 28820 --- [main] com.evaristo.bartender.BartenderApp      : No active profile set, falling back to default profiles: default
+2018-01-25 08:06:54.227  INFO 28820 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@31206beb: startup date [Thu Jan 25 08:06:54 CET 2018]; root of context hierarchy
+2018-01-25 08:06:55.523  INFO 28820 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-01-25 08:06:55.538  INFO 28820 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-01-25 08:06:55.539  INFO 28820 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-01-25 08:06:55.665  INFO 28820 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-01-25 08:06:55.665  INFO 28820 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1440 ms
+2018-01-25 08:06:55.796  INFO 28820 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-01-25 08:06:55.799  INFO 28820 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-01-25 08:06:55.799  INFO 28820 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-01-25 08:06:55.799  INFO 28820 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-01-25 08:06:55.800  INFO 28820 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-01-25 08:06:55.848  INFO 28820 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'beerTaskExecutor'
+2018-01-25 08:06:55.850  INFO 28820 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'drinkTaskExecutor'
+2018-01-25 08:06:56.088  INFO 28820 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@31206beb: startup date [Thu Jan 25 08:06:54 CET 2018]; root of context hierarchy
+2018-01-25 08:06:56.155  INFO 28820 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/drink],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.evaristo.bartender.controller.CustomerRequestController.serveDrink(java.lang.String,java.lang.String)
+2018-01-25 08:06:56.156  INFO 28820 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/log]}" onto public java.lang.String com.evaristo.bartender.controller.LogRequestController.serveLog()
+2018-01-25 08:06:56.159  INFO 28820 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-01-25 08:06:56.160  INFO 28820 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-01-25 08:06:56.186  INFO 28820 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-25 08:06:56.187  INFO 28820 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-25 08:06:56.219  INFO 28820 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-25 08:06:56.329  INFO 28820 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-01-25 08:06:56.383  INFO 28820 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-01-25 08:06:56.387  INFO 28820 --- [main] com.evaristo.bartender.BartenderApp      : Started BartenderApp in 2.522 seconds (JVM running for 2.918)
+2018-01-25 08:07:55.017  INFO 28820 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-01-25 08:07:55.018  INFO 28820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-01-25 08:07:55.035  INFO 28820 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 17 ms
+2018-01-25 08:09:33.154  INFO 32072 --- [main] com.evaristo.bartender.BartenderApp      : Starting BartenderApp on CPX-60LKEJ885W6 with PID 32072 (C:\Users\e.a.carmona.robledo\git\bartender\bartendertest\target\classes started by e.a.carmona.robledo in C:\Users\e.a.carmona.robledo\git\bartender\bartendertest)
+2018-01-25 08:09:33.157  INFO 32072 --- [main] com.evaristo.bartender.BartenderApp      : No active profile set, falling back to default profiles: default
+2018-01-25 08:09:33.201  INFO 32072 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@31206beb: startup date [Thu Jan 25 08:09:33 CET 2018]; root of context hierarchy
+2018-01-25 08:09:34.433  INFO 32072 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-01-25 08:09:34.444  INFO 32072 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-01-25 08:09:34.445  INFO 32072 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-01-25 08:09:34.555  INFO 32072 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-01-25 08:09:34.556  INFO 32072 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1358 ms
+2018-01-25 08:09:34.686  INFO 32072 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-01-25 08:09:34.690  INFO 32072 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-01-25 08:09:34.691  INFO 32072 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-01-25 08:09:34.691  INFO 32072 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-01-25 08:09:34.691  INFO 32072 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-01-25 08:09:34.737  INFO 32072 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'beerTaskExecutor'
+2018-01-25 08:09:34.738  INFO 32072 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'drinkTaskExecutor'
+2018-01-25 08:09:34.952  INFO 32072 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@31206beb: startup date [Thu Jan 25 08:09:33 CET 2018]; root of context hierarchy
+2018-01-25 08:09:35.005  INFO 32072 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/drink],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.evaristo.bartender.controller.CustomerRequestController.serveDrink(java.lang.String,java.lang.String)
+2018-01-25 08:09:35.006  INFO 32072 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/log]}" onto public java.lang.String com.evaristo.bartender.controller.LogRequestController.serveLog()
+2018-01-25 08:09:35.009  INFO 32072 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-01-25 08:09:35.010  INFO 32072 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-01-25 08:09:35.038  INFO 32072 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-25 08:09:35.038  INFO 32072 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-25 08:09:35.066  INFO 32072 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-25 08:09:35.164  INFO 32072 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-01-25 08:09:35.221  INFO 32072 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-01-25 08:09:35.224  INFO 32072 --- [main] com.evaristo.bartender.BartenderApp      : Started BartenderApp in 2.359 seconds (JVM running for 2.733)
+2018-01-25 08:09:40.630  INFO 32072 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-01-25 08:09:40.631  INFO 32072 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-01-25 08:09:40.646  INFO 32072 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 14 ms
+2018-01-25 17:24:55.483  INFO 11668 --- [main] com.evaristo.bartender.BartenderApp      : Starting BartenderApp on CPX-60LKEJ885W6 with PID 11668 (C:\Users\e.a.carmona.robledo\git\bartender\bartendertest\target\classes started by e.a.carmona.robledo in C:\Users\e.a.carmona.robledo\git\bartender\bartendertest)
+2018-01-25 17:24:55.485  INFO 11668 --- [main] com.evaristo.bartender.BartenderApp      : No active profile set, falling back to default profiles: default
+2018-01-25 17:24:55.528  INFO 11668 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@31206beb: startup date [Thu Jan 25 17:24:55 CET 2018]; root of context hierarchy
+2018-01-25 17:24:56.877  INFO 11668 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-01-25 17:24:56.894  INFO 11668 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-01-25 17:24:56.895  INFO 11668 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-01-25 17:24:57.029  INFO 11668 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-01-25 17:24:57.029  INFO 11668 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1505 ms
+2018-01-25 17:24:57.167  INFO 11668 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-01-25 17:24:57.172  INFO 11668 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-01-25 17:24:57.174  INFO 11668 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-01-25 17:24:57.174  INFO 11668 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-01-25 17:24:57.175  INFO 11668 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-01-25 17:24:57.240  INFO 11668 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'taskExecutor'
+2018-01-25 17:24:57.243  WARN 11668 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'customerRequestController': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'bartender.beer-serve-time' in value "${bartender.beer-serve-time}"
+2018-01-25 17:24:57.244  INFO 11668 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'taskExecutor'
+2018-01-25 17:24:57.247  INFO 11668 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-01-25 17:24:57.262  INFO 11668 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-01-25 17:24:57.270 ERROR 11668 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'customerRequestController': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'bartender.beer-serve-time' in value "${bartender.beer-serve-time}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:372) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867) ~[spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) ~[spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at com.evaristo.bartender.BartenderApp.main(BartenderApp.java:21) [classes/:na]
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'bartender.beer-serve-time' in value "${bartender.beer-serve-time}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:174) ~[spring-core-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:236) ~[spring-core-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer$2.resolveStringValue(PropertySourcesPlaceholderConfigurer.java:172) ~[spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:831) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1086) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	... 17 common frames omitted
+
+2018-01-25 17:26:32.781  INFO 17540 --- [main] com.evaristo.bartender.BartenderApp      : Starting BartenderApp on CPX-60LKEJ885W6 with PID 17540 (C:\Users\e.a.carmona.robledo\git\bartender\bartendertest\target\classes started by e.a.carmona.robledo in C:\Users\e.a.carmona.robledo\git\bartender\bartendertest)
+2018-01-25 17:26:32.784  INFO 17540 --- [main] com.evaristo.bartender.BartenderApp      : No active profile set, falling back to default profiles: default
+2018-01-25 17:26:32.830  INFO 17540 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@31206beb: startup date [Thu Jan 25 17:26:32 CET 2018]; root of context hierarchy
+2018-01-25 17:26:34.021  INFO 17540 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-01-25 17:26:34.036  INFO 17540 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-01-25 17:26:34.037  INFO 17540 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-01-25 17:26:34.158  INFO 17540 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-01-25 17:26:34.159  INFO 17540 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1332 ms
+2018-01-25 17:26:34.311  INFO 17540 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-01-25 17:26:34.315  INFO 17540 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-01-25 17:26:34.316  INFO 17540 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-01-25 17:26:34.316  INFO 17540 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-01-25 17:26:34.317  INFO 17540 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-01-25 17:26:34.369  INFO 17540 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'taskExecutor'
+2018-01-25 17:26:34.371  WARN 17540 --- [main] ationConfigEmbeddedWebApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'customerRequestController': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'bartender.beer-serve-time' in value "${bartender.beer-serve-time}"
+2018-01-25 17:26:34.371  INFO 17540 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'taskExecutor'
+2018-01-25 17:26:34.374  INFO 17540 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2018-01-25 17:26:34.386  INFO 17540 --- [main] utoConfigurationReportLoggingInitializer : 
+
+Error starting ApplicationContext. To display the auto-configuration report re-run your application with 'debug' enabled.
+2018-01-25 17:26:34.393 ERROR 17540 --- [main] o.s.boot.SpringApplication               : Application startup failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'customerRequestController': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'bartender.beer-serve-time' in value "${bartender.beer-serve-time}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:372) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1264) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867) ~[spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543) ~[spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.boot.context.embedded.EmbeddedWebApplicationContext.refresh(EmbeddedWebApplicationContext.java:122) ~[spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:693) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:360) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1118) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1107) [spring-boot-1.5.9.RELEASE.jar:1.5.9.RELEASE]
+	at com.evaristo.bartender.BartenderApp.main(BartenderApp.java:21) [classes/:na]
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'bartender.beer-serve-time' in value "${bartender.beer-serve-time}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:174) ~[spring-core-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:236) ~[spring-core-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer$2.resolveStringValue(PropertySourcesPlaceholderConfigurer.java:172) ~[spring-context-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:831) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1086) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1066) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:585) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:366) ~[spring-beans-4.3.13.RELEASE.jar:4.3.13.RELEASE]
+	... 17 common frames omitted
+
+2018-01-25 17:26:51.683  INFO 28960 --- [main] com.evaristo.bartender.BartenderApp      : Starting BartenderApp on CPX-60LKEJ885W6 with PID 28960 (C:\Users\e.a.carmona.robledo\git\bartender\bartendertest\target\classes started by e.a.carmona.robledo in C:\Users\e.a.carmona.robledo\git\bartender\bartendertest)
+2018-01-25 17:26:51.686  INFO 28960 --- [main] com.evaristo.bartender.BartenderApp      : No active profile set, falling back to default profiles: default
+2018-01-25 17:26:51.737  INFO 28960 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@31206beb: startup date [Thu Jan 25 17:26:51 CET 2018]; root of context hierarchy
+2018-01-25 17:26:52.883  INFO 28960 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2018-01-25 17:26:52.898  INFO 28960 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-01-25 17:26:52.900  INFO 28960 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.23
+2018-01-25 17:26:53.001  INFO 28960 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-01-25 17:26:53.001  INFO 28960 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1267 ms
+2018-01-25 17:26:53.116  INFO 28960 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2018-01-25 17:26:53.120  INFO 28960 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-01-25 17:26:53.121  INFO 28960 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-01-25 17:26:53.121  INFO 28960 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-01-25 17:26:53.121  INFO 28960 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-01-25 17:26:53.167  INFO 28960 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService  'taskExecutor'
+2018-01-25 17:26:53.394  INFO 28960 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@31206beb: startup date [Thu Jan 25 17:26:51 CET 2018]; root of context hierarchy
+2018-01-25 17:26:53.464  INFO 28960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/drink],methods=[POST]}" onto public org.springframework.http.ResponseEntity<java.lang.String> com.evaristo.bartender.controller.CustomerRequestController.serveDrink(java.lang.String,java.lang.String)
+2018-01-25 17:26:53.468  INFO 28960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-01-25 17:26:53.469  INFO 28960 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-01-25 17:26:53.495  INFO 28960 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-25 17:26:53.495  INFO 28960 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-25 17:26:53.525  INFO 28960 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-01-25 17:26:53.648  INFO 28960 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2018-01-25 17:26:53.717  INFO 28960 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2018-01-25 17:26:53.721  INFO 28960 --- [main] com.evaristo.bartender.BartenderApp      : Started BartenderApp in 2.322 seconds (JVM running for 2.671)
+2018-01-25 18:09:22.471  INFO 28960 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-01-25 18:09:22.472  INFO 28960 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2018-01-25 18:09:22.495  INFO 28960 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 22 ms
+2018-01-25 18:09:22.546  INFO 28960 --- [http-nio-8080-exec-1] c.e.b.c.CustomerRequestController        : Request id: 1 Incoming request. Type: BEER
+2018-01-25 18:09:22.548  INFO 28960 --- [http-nio-8080-exec-1] c.e.b.c.CustomerRequestController        : Request id: 1 Request accepted. Serving.
+2018-01-25 18:09:23.006  INFO 28960 --- [http-nio-8080-exec-2] c.e.b.c.CustomerRequestController        : Request id: 1 Incoming request. Type: BEER
+2018-01-25 18:09:23.007  INFO 28960 --- [http-nio-8080-exec-2] c.e.b.c.CustomerRequestController        : Request id: 1 Request accepted. Serving.
+2018-01-25 18:09:23.867  INFO 28960 --- [http-nio-8080-exec-3] c.e.b.c.CustomerRequestController        : Request id: 1 Incoming request. Type: BEER
+2018-01-25 18:09:23.868  WARN 28960 --- [http-nio-8080-exec-3] c.e.b.c.CustomerRequestController        : Request id: 1 The bartender is busy, can't serve the request.
+2018-01-25 18:09:26.796  INFO 28960 --- [http-nio-8080-exec-4] c.e.b.c.CustomerRequestController        : Request id: 1 Incoming request. Type: BEER
+2018-01-25 18:09:26.797  WARN 28960 --- [http-nio-8080-exec-4] c.e.b.c.CustomerRequestController        : Request id: 1 The bartender is busy, can't serve the request.
+2018-01-25 18:09:37.722  INFO 28960 --- [http-nio-8080-exec-5] c.e.b.c.CustomerRequestController        : Request id: 2 Incoming request. Type: DRINK
+2018-01-25 18:09:37.724  INFO 28960 --- [http-nio-8080-exec-5] c.e.b.c.CustomerRequestController        : Request id: 2 Request accepted. Serving.
+2018-01-25 18:09:38.929  INFO 28960 --- [http-nio-8080-exec-6] c.e.b.c.CustomerRequestController        : Request id: 2 Incoming request. Type: DRINK
+2018-01-25 18:09:38.930  WARN 28960 --- [http-nio-8080-exec-6] c.e.b.c.CustomerRequestController        : Request id: 2 The bartender is busy, can't serve the request.
+2018-01-25 18:09:42.051  INFO 28960 --- [http-nio-8080-exec-7] c.e.b.c.CustomerRequestController        : Request id: 1 Incoming request. Type: BEER
+2018-01-25 18:09:42.052  INFO 28960 --- [http-nio-8080-exec-7] c.e.b.c.CustomerRequestController        : Request id: 1 Request accepted. Serving.

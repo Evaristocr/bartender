@@ -9,11 +9,8 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 @SpringBootApplication
 public class BartenderApp {
 	
-	@Value("${bartender.beer-max-pool-size}")
-	private int beerMaxPoolSize;
-	
-	@Value("${bartender.drink-max-pool-size}")
-	private int drinkMaxPoolSize;
+	@Value("${bartender.max-pool-size}")
+	private int maxPoolSize;
 	
 	@Value("${bartender.queue-capacity}")
 	private int queueCapacity;
@@ -23,25 +20,14 @@ public class BartenderApp {
 	}
 	
 	/**
-	 * TaskExecutor that serve the BEER requests.
+	 * TaskExecutor that handle the drink tasks.
 	 */
 	@Bean
-    public ThreadPoolTaskExecutor beerTaskExecutor() {
-        ThreadPoolTaskExecutor beerTaskExecutor = new ThreadPoolTaskExecutor();
-        beerTaskExecutor.setMaxPoolSize(beerMaxPoolSize);
-        beerTaskExecutor.setQueueCapacity(queueCapacity);
-        return beerTaskExecutor;
-    }
-	
-	/**
-	 * TaskExecutor that serve the DRINK requests.
-	 */
-	@Bean
-    public ThreadPoolTaskExecutor drinkTaskExecutor() {
-        ThreadPoolTaskExecutor drinkTaskExecutor = new ThreadPoolTaskExecutor();
-        drinkTaskExecutor.setMaxPoolSize(drinkMaxPoolSize);
-        drinkTaskExecutor.setQueueCapacity(queueCapacity);
-        return drinkTaskExecutor;
+    public ThreadPoolTaskExecutor taskExecutor() {
+        ThreadPoolTaskExecutor taskExecutor = new ThreadPoolTaskExecutor();
+        taskExecutor.setMaxPoolSize(maxPoolSize);
+        taskExecutor.setQueueCapacity(queueCapacity);
+        return taskExecutor;
     }
 
 }
